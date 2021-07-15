@@ -1,5 +1,5 @@
 ---
-title: "Reproducible Research - Week 4 Course Project 2"
+title: "NOAA Storm Data Analysis: Impacts on Economy and Population Health"
 author: "Hayes Chow"
 date: "13/07/2021"
 output: 
@@ -103,7 +103,7 @@ This analysis narrowed the focus of the NOAA storm database to year 2010. To hig
   ```r
   # plot fatalities
   ggplot(fa, aes(x = reorder(EVTYPE, -FATALITIES), y = FATALITIES)) + 
-    ggtitle("Top 3 Events with Most Number of Fatalaties") +
+    ggtitle("US 2010 - Top 3 Events with Most Number of Fatalaties") +
     theme(plot.title = element_text(hjust = 0.5),  # centre text
       panel.background = element_rect(fill = "white", color = "black")) + 
     xlab("Event Types") +
@@ -125,7 +125,7 @@ This analysis narrowed the focus of the NOAA storm database to year 2010. To hig
   library(ggplot2)
   # plot proptery damage
   ggplot(pda, aes(x = reorder(EVTYPE, -property_dmg), y = property_dmg)) + 
-    ggtitle("Top 3 Events with Most Property Damage") +
+    ggtitle("US 2010 - Top 3 Events with Most Property Damage") +
     theme(plot.title = element_text(hjust = 0.5), # centre text
       panel.background = element_rect(fill = "white", color = "black")) + 
     xlab("Event Types") +
